@@ -1,7 +1,12 @@
 Docker Jenkins Slave
 ====================
 
-### 
+###
+
+
+```
+docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/slave.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
+```
 
 ### Simply want to run Jenkins slave from a docker container?
 
