@@ -14,7 +14,7 @@ Docker Jenkins Slave
 - Enjoy :+1:
 
 ```
-docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/slave.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
+docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/agent.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
 ```
 
 Wonder why this is awesome? Check out [the related blog post](http://blog.fgribreau.com/2016/05/how-to-start-jenkins-slave-inside.html).

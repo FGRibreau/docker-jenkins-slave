@@ -2,7 +2,7 @@
 # NAME             : fgribreau/jenkins-slave
 # TO_BUILD         : docker build --rm -t fgribreau/jenkins-slave:latest .
 # TO_PUSH          : docker push fgribreau/jenkins-slave:latest
-# TO_RUN           : docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/slave.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
+# TO_RUN           : docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/agent.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
 ##
 FROM java:8
 MAINTAINER François-Guillaume Ribreau <docker@fgribreau.com>
