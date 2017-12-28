@@ -4,7 +4,7 @@
 # TO_PUSH          : docker push fgribreau/jenkins-slave:latest
 # TO_RUN           : docker run --rm -v /data/jenkins-slave:/data/jenkins-slave -v /var/run/docker.sock:/var/run/docker.sock --rm fgribreau/jenkins-slave:latest java -jar /app/slave.jar -jnlpUrl "http://YOUR_OWN_JENKINS.com/computer/SLAVE_NAME/slave-agent.jnlp" -secret "JENKINS_SECRET"
 ##
-FROM java:7
+FROM java:8
 MAINTAINER François-Guillaume Ribreau <docker@fgribreau.com>
 
 WORKDIR /app
@@ -18,4 +18,4 @@ RUN apt-get update -y && \
     apt-get install docker-engine -y
 
 # download slave.jar
-RUN wget https://ci.jenkins.io/jnlpJars/slave.jar
+RUN wget http://jenkins.redsmin.com/jnlpJars/agent.jar
